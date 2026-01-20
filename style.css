@@ -7,11 +7,11 @@
     /*outline: 1px solid red;*/
 }
 
-html {
+.htmlbase {
     scroll-behavior: smooth;
 }
 
-body{
+.pagina{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -19,7 +19,10 @@ body{
     color: #1f1f1f;
 }
 
-header{
+.border_title{
+    position: relative;
+    padding-bottom: 10px;
+    color: #5d140e;
     padding: 15px;
     font-family: "Special Elite";
 }
@@ -29,14 +32,8 @@ header{
     max-height: 100px;
 }
 
-#burguer{
+.material-symbols-outlined.burguer{
     display: none;
-}
-
-.border_title{
-    position: relative;
-    padding-bottom: 10px;
-    color: #5d140e
 }
 
 .border_title::after{
@@ -51,34 +48,30 @@ header{
     transform: translateX(-50%); /* Centraliza perfeitamente */ 
 }
 
-header h1{
-    text-align: left;
-}
-
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header nav ul li{
+.navbar__item {
     display: inline;
     padding-right: 5px;
 }
 
-header nav ul li a{
+.navbar__tag {
     padding: 5px;
     text-decoration: none;
     color: #1f1f1f;
     font-size: 1.5rem;
 }
 
-.item_navbar:hover{
+.navbar__tag:hover{
     background-color: #5e171071;
     border-radius: 30%;
 }
 
-section{
+.section{
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -99,17 +92,17 @@ section{
     font-family: "Special Elite";
 }
 
-.apresentacao_edit{
+.apresentacao__edit{
     grid-column: 2/3;
     font-size: 1.3em;
 }
 
-.apresentacao_texto{
+.apresentacao__texto{
     color: #494949;
     margin-top: 1rem;
 }
 
-.foto_home{
+.aprensetacao__foto{
     height: 95vh;
     border-radius: 10px;
     grid-column: 4/5;
@@ -131,7 +124,7 @@ section{
     grid-template-columns: 1fr 1.5fr;
 }
 
-.bloco_secao {
+.secao {
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -142,7 +135,7 @@ section{
   
 }
 
-.titulo_secao{
+.secao__titulo{
     text-align: center;
     font-family: "Special Elite";
     position: relative;
@@ -150,7 +143,7 @@ section{
     margin-bottom: 1rem;
 }
 
-.titulo_secao::after{
+.secao__titulo::after{
     content: ''; /* Pseudo-elementos precisam da propriedade content */
     display: block;
     width: 100px; /* Define o comprimento da borda */
@@ -162,7 +155,7 @@ section{
     transform: translateX(-50%); /* Centraliza perfeitamente */
 }
 
-.texto_sobre{
+.secao__texto{
     color: #494949;
     text-align: center;
     max-width: 70%;
@@ -174,7 +167,7 @@ section{
 
 }
 
-.foto_sobre{
+.sobre__foto{
     height: 95vh;
     border-radius: 10px;
     width: 90%;
@@ -182,13 +175,13 @@ section{
     grid-area: nav;
 }
 
-.secao_depoimentos{
+.depoimentos{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.carrosel_depo{
+.carrossel{
     display: flex;
     margin: 0 auto;
     padding: 20px 0;
@@ -196,12 +189,12 @@ section{
     overflow: hidden;
     > * {flex: 0 0 100%;}
 
-    &:hover .grupo_carrossel {
+    &:hover .carrossel__grupo {
       animation-play-state: paused;
     }
 }
 
-.grupo_carrossel{
+.carrossel__grupo{
     display: flex;
     padding-right: 20px;
     will-change: transform;
@@ -217,7 +210,7 @@ section{
     }
 }
 
-.projeto_box{
+.carrossel__card{
     margin: 10px 50px;
     background-color: #ebb587;
     width: 350px;
@@ -226,44 +219,44 @@ section{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.icone_quote{
+.texto__quote{
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: #5d140e;
 }
 
-.pessoa{
+.carrossel__pessoa{
     display: flex;
     align-items: center;
 }
 
-.pessoa img{
+.carrossel__imagem {
     width: 23%;
     height: 23%;
 }
 
-.nome-pessoa{
+.pessoa__nome{
     color: #5d140e;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.func-pessoa{
+.pessoa__funcao{
     color: #6e1c15;
     font-weight: light;
     font-size: 0.8rem;
 }
 
-.projeto_textos{
+.carrossel__texto{
     padding: 15px;
 }
 
-.projeto_textos p{
+.texto__edit{
     color: #2c2c2c;
     padding-bottom: 10px;
 }
 
-.servico_ofer{
+.servico-ofer{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -271,32 +264,32 @@ section{
     justify-self: center;
     height: 90%;
 }
-.servico_ofer > :nth-child(1){
+.servico-ofer > :nth-child(1){
     grid-row: 1/2;
     grid-column: 2/3;
 }
-.servico_ofer > :nth-child(2){
+.servico-ofer > :nth-child(2){
     grid-row: 1/2;
     grid-column: 3/4;
 }
-.servico_ofer > :nth-child(3){
+.servico-ofer > :nth-child(3){
     grid-row: 1/2;
     grid-column: 4/5;
 }
-.servico_ofer > :nth-child(4){
+.servico-ofer > :nth-child(4){
     grid-row: 2/3;
     grid-column: 2/3;
 }
-.servico_ofer > :nth-child(5){
+.servico-ofer > :nth-child(5){
     grid-row: 2/3;
     grid-column: 3/4;
 }
-.servico_ofer > :nth-child(6){
+.servico-ofer > :nth-child(6){
     grid-row: 2/3;
     grid-column: 4/5;
 }
 
-.projeto_box_hab{
+.servico__box{
     margin: 10px 15px;
     padding: 20px;
     background-color: #ebb587;
@@ -307,7 +300,7 @@ section{
     place-self: center;
 }
 
-.icone_habilidades{
+.servico__icone{
     font-size: 4rem;
     margin-top: 2rem;
     margin-bottom: 10px;
@@ -315,7 +308,7 @@ section{
     text-align: center;
 }
 
-.habilidades_texto{
+.servico__texto{
     text-align: center;
     color: #5d140e;
     margin-bottom: 1rem;
@@ -336,60 +329,55 @@ footer{
     text-align: center;
 }
 
-.container_rodape{
+.contato__container{
     display: flex;
     justify-content: space-around;
     width: 60%;
     margin-left: 20%;
 }
 
-.texto_contato{
+.contato__texto{
     margin: 2rem 0px;
 }
 
-.info_texto_contato{
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
-
-.topico_contato{
+.contato__topico{
     margin-top: 10px;
     text-align: start;
 }
 
-.topico_contato i{
+.topico__icone{
     margin-right: 10px;
 }
 
-.formulario_contato{
+.contato__formulario{
     display: flex;
     flex-direction: column;
     margin: 2rem 0px;
     gap: 10px;
 }
 
-.formulario_contato input,
-.formulario_contato textarea{
+.formulario__input,
+.formulario__textarea {
     padding: 10px;
     border-radius: 10px;
     font-family: inherit;
 }
 
-.btn_enviar{
+.btn{
     background-color: #c07b72;
     padding: 10px;
     border-radius: 10px;
     font-size: inherit;
 }
 
-.rodape_direitos{
+.contato__direitos{
     width: 50%;
     margin-left: 25%;
     padding-top: 2rem;
     border-top: 1px solid #5d140e;
 }
 
-.titulo_mais{
+.titulo-mais{
     font-size: 1.3em;
 }
 
@@ -407,22 +395,22 @@ footer{
             'GRAD' 0,
             'opsz' 40
     }
-    #burguer{
+    .material-symbols-outlined.burguer{
         display: block;
         margin-left: 40%;
         font-size: 1.5rem;
     }
 
-    .burguer_itens{
+    .menu__itens{
         display: flex;
         flex-direction: column;
     }
 
-    menu{
+    .burguer-menu{
         display: none;
     }
 
-    .item_navbar{
+    .navbar__tag{
         font-size: 1rem;
     }
 
@@ -430,7 +418,7 @@ footer{
         width: 250px;
     }
 
-    section{
+    .section{
         height: 80vh;
     }
 
@@ -442,93 +430,93 @@ footer{
         justify-content: center;
     }
 
-    .apresentacao_edit{
+    .apresentacao__edit{
         font-size: 0.7rem;
     }
 
-    .foto_home{
+    .aprensetacao__foto{
         height: 95%;
     }
 
-    .foto_sobre{
+    .sobre__foto{
         height: 95%;
     }
 
-    .bloco_secao{
+    .secao{
         font-size: 0.7rem;
     }
 
-    .texto_sobre{
+    .secao__texto{
         max-width: 77%;
     }
 
-    .titulo_mais{
+    .titulo-mais{
         font-size: 0.7rem;
     }
 
-    .servico_ofer{
+    .servico-ofer{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         height: 90%;
         row-gap: 0rem;
     }
-    .servico_ofer > :nth-child(1){
+    .servico-ofer > :nth-child(1){
         grid-row: 1/2;
         grid-column: 2/3;
     }
-    .servico_ofer > :nth-child(2){
+    .servico-ofer > :nth-child(2){
         grid-row: 1/2;
         grid-column: 3/4;
     }
-    .servico_ofer > :nth-child(3){
+    .servico-ofer > :nth-child(3){
         grid-row: 2/3;
         grid-column: 2/3;
     }
-    .servico_ofer > :nth-child(4){
+    .servico-ofer > :nth-child(4){
         grid-row: 2/3;
         grid-column: 3/4;
     }
-    .servico_ofer > :nth-child(5){
+    .servico-ofer > :nth-child(5){
         grid-row: 3/4;
         grid-column: 2/3;
     }
-    .servico_ofer > :nth-child(6){
+    .servico-ofer > :nth-child(6){
         grid-row: 3/4;
         grid-column: 3/4;
     }
 
-    .projeto_box_hab{
+    .servico__box{
         width: 150px;
         height: 140px;
         padding: 5px;
         margin: 5px;
     }
 
-    .icone_habilidades{
+    .servico__icone{
         font-size: 3rem;
         margin-top: 0.5rem;
     }
 
-    .habilidades_texto{
+    .servico__texto{
         font-size: 0.8rem;
         margin-bottom: 0;
     }
 
-    .carrosel_depo{
+    .carrossel{
         max-width: 300px;
     }
 
-    .projeto_box{
+    .carrossel__card{
         width: 250px;
         max-height: 250px;
     }
 
-    .projeto_textos{
+    .carrossel__texto{
         padding: 5px;
     }
 
-    .container_rodape{
+    .contato__container{
         display: block;
     }
 
@@ -541,7 +529,8 @@ footer{
         max-height: 100px;
     }
 
-    #burguer{
+    
+    .material-symbols-outlined.burguer{
         display: none;
     }
 
@@ -553,7 +542,7 @@ footer{
         width: 400px;
     }
 
-    section{
+    .section{
         height: 50vh;
     }
 
@@ -565,36 +554,36 @@ footer{
         justify-content: center;
     }
 
-    .apresentacao_edit{
+    .apresentacao__edit{
         font-size: 1rem;
     }
 
-    .foto_home{
+    .aprensetacao__foto{
         height: 95%;
     }
 
-    .foto_sobre{
+    .sobre__foto{
         height: 95%;
     }
 
-    .bloco_secao{
+    .secao{
         font-size: 1rem;
     }
 
-    .texto_sobre{
+    .secao__texto{
         max-width: 77%;
     }
 
-    .projeto_box_hab{
+    .servico__box{
         width: 240px;
         height: 190px;
     }
 
-    .carrosel_depo{
+    .carrossel{
         max-width: 600px;
     }
 
-    .container_rodape{
+    .contato__container{
         align-items: center;
         justify-content: center;
         gap: 100px;
