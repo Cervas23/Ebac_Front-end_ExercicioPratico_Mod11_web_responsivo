@@ -1,0 +1,17 @@
+@use 'variaveis';
+
+@mixin grid-pos($linha-comeco, $linha-fim, $coluna-comeco, $coluna-fim) {
+  grid-row: #{$linha-comeco} / #{$linha-fim};
+  grid-column: #{$coluna-comeco} / #{$coluna-fim};
+}
+@mixin tracar-linha($comprimento){
+  content: '';
+  display: block;
+  width: $comprimento;
+  height: 1px;
+  background-color: variaveis.$cor-linha-separar;
+  position: absolute;
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%);
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACriativa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/3f009f8e14.js" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@
 </head>
 <body class="pagina">
     <!-- Cabeçalho -->
-    <header class="border_title">
+    <header class="border-title">
         <nav class="navbar">
             <img src="Imagens/Logo.png" alt="Logo da empresa" class="img_logo">
             <i class="burguer material-symbols-outlined" onclick="menuBurguer()">menu</i>
@@ -41,7 +41,7 @@
                 </p>
             </div>
             <img 
-                class="aprensetacao__foto"
+                class="apresentacao__foto"
                 loading="lazy"
                 decoding="async"
                 src="Imagens/home_grande.jpg"
@@ -90,7 +90,7 @@
             <div class="titulo-mais">
                 <h2 class="secao__titulo">Serviços oferecidos</h2>
             </div>
-            <div class="servico-ofer">
+            <div class="servico">
                 <article class="servico__box">
                     <div class="servico__icone">
                         <i class="fa-solid fa-computer"></i>
@@ -156,7 +156,7 @@
                         </div>
                         <div class="carrossel__pessoa">
                             <img class="carrossel__imagem" src="Imagens/icone-de-usuario.png" alt="Icone de usuário">
-                            <div class="pessoa__info">
+                            <div class="pessoa">
                                 <p class="pessoa__nome">Jorge Vinte</p>
                                 <p class="pessoa__funcao">CEO empresa X</p>
                             </div>
@@ -171,7 +171,7 @@
                         </div>
                         <div class="carrossel__pessoa">
                             <img class="carrossel__imagem" src="Imagens/icone-de-usuario.png" alt="Icone de usuário">
-                            <div class="pessoa__info">
+                            <div class="pessoa">
                                 <p class="pessoa__nome">Caio Pio</p>
                                 <p class="pessoa__funcao">Desenvolvedor</p>
                             </div>
@@ -186,7 +186,7 @@
                         </div>
                         <div class="carrossel__pessoa">
                             <img class="carrossel__imagem" src="Imagens/icone-de-usuario.png" alt="Icone de usuário">
-                            <div class="pessoa__info">
+                            <div class="pessoa">
                                 <p class="pessoa__nome">Joana Vicente</p>
                                 <p class="pessoa__funcao">Product Owner</p>
                             </div>
@@ -203,7 +203,7 @@
                         </div>
                         <div class="carrossel__pessoa">
                             <img class="carrossel__imagem" src="Imagens/icone-de-usuario.png" alt="Icone de usuário">
-                            <div class="pessoa__info">
+                            <div class="pessoa">
                                 <p class="pessoa__nome">Jorge Vinte</p>
                                 <p class="pessoa__funcao">CEO empresa X</p>
                             </div>
@@ -218,7 +218,7 @@
                         </div>
                         <div class="carrossel__pessoa">
                             <img class="carrossel__imagem" src="Imagens/icone-de-usuario.png" alt="Icone de usuário">
-                            <div class="pessoa__info">
+                            <div class="pessoa">
                                 <p class="pessoa__nome">Caio Pio</p>
                                 <p class="pessoa__funcao">Desenvolvedor</p>
                             </div>
@@ -233,7 +233,7 @@
                         </div>
                         <div class="carrossel__pessoa">
                             <img class="carrossel__imagem" src="Imagens/icone-de-usuario.png" alt="Icone de usuário">
-                            <div class="pessoa__info">
+                            <div class="pessoa">
                                 <p class="pessoa__nome">Joana Vicente</p>
                                 <p class="pessoa__funcao">Product Owner</p>
                             </div>
@@ -245,8 +245,8 @@
     </main>
 
     <!-- Rodapé -->
-    <footer id="contato">
-        <div class="contato__container">
+    <footer class="footer" id="contato">
+        <div class="contato">
             <div class="contato__texto">
                 <h2 class="secao__titulo">Vamos trabalhar juntos?</h2>
                 <p class="contato__texto">Estamos curiosos pelo seu contato.    </p>
@@ -275,22 +275,6 @@
         </div>
         <p class="contato__direitos">&copy; 2026 Agência Criativa Web - Todos os direitos reservados.</p>
     </footer>
-    <script>
-        function menuBurguer() {
-        const itens = document.getElementById('menu');
-            if (window.innerWidth <= 600) {
-                itens.style.display =
-                itens.style.display === 'block' ? 'none' : 'block';
-            }
-        }
-        window.addEventListener('resize', () => {
-        const itens = document.getElementById('menu');
-            if (window.innerWidth > 600) {
-                itens.style.display = 'block';
-            } else {
-                itens.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

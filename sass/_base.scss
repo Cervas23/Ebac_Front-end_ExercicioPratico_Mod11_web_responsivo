@@ -1,0 +1,22 @@
+@use 'variaveis';
+
+/* CSS reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*outline: 1px solid red;*/
+}
+
+.htmlbase {
+    scroll-behavior: smooth;
+}
+
+.pagina{
+    font-family: variaveis.$fonte-padrao;
+    font-size: variaveis.$tamanho-fonte-padrao;
+    line-height: 1.5;
+    background-color: variaveis.$cor-pagina;
+    color: variaveis.$cor-fonte-basica;
+}

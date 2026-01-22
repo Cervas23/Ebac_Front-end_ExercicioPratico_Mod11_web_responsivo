@@ -1,0 +1,58 @@
+@use 'variaveis';
+
+/*Card depoimentos*/
+.carrossel{
+    &__card{
+        margin: variaveis.$pixel-padrao calc(variaveis.$pixel-padrao * 5);
+        background-color: variaveis.$cor-card;
+        width: calc(variaveis.$width-padrao * 3.5);
+        max-height: calc(variaveis.$height-padrao * 3);
+        border-radius: calc(variaveis.$pixel-padrao * 1.5);
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    &__texto{
+        padding: calc(variaveis.$padding-padrao * 1.5);
+    }
+
+    &__pessoa{
+        display: flex;
+        align-items: center;
+    }
+
+    &__imagem{
+        width: 23%;
+        height: 23%;
+    }
+}
+
+.texto__quote{
+    font-size: calc(variaveis.$tamanho-fonte-padrao * 2);
+    margin-bottom: 0.5rem;
+    color: variaveis.$cor-highlight;
+}
+
+.texto__edit{
+    color: variaveis.$cor-fonte-card;
+    padding-bottom: variaveis.$pixel-padrao;
+}
+
+.pessoa{
+    &__nome{
+        color: variaveis.$cor-highlight;
+        font-weight: bold;
+        font-size: calc(variaveis.$tamanho-fonte-padrao * 1.1);
+    }
+    &__funcao{
+        color: variaveis.$cor-highlight-claro;
+        font-weight: light;
+        font-size: calc(variaveis.$tamanho-fonte-padrao * 1.1);
+    }
+}
+
+.btn{
+    background-color: variaveis.$cor-botao;
+    padding: variaveis.$padding-padrao;
+    border-radius: variaveis.$pixel-padrao;
+    font-size: inherit;
+}
